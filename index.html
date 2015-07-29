@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>Socket IO example</title>
+		<style>
+			ul.percentage { width: 100% }
+			ul.percentage li { display: block; width: 0; }
+			ul.percentage li span { float: right; display: block }
+			ul.percentage li.google { background: #0E70A5; color: #fff }
+		</style>
+	</head>	
+	<body>
+		<h1 style="color:#3facf9">Google Pulse</h1>
+		<ul class="percentage">
+			<li class="google">
+				google<span></span>
+			</li>
+		</ul>
+		<ul class="tweets"></ul>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script src="http://127.0.0.1:3000/socket.io/socket.io.js"></script>
+		<script>
+		try{
+          var socket = io.connect('http://localhost:3000');
+        }catch(e){
+			console.log('exception',e)      
+		}
+			jQuery(function ($){
+				var tweetList = $('ul.tweets'),
+					count = $('li.google')
+				 if(socket !== undefined){
+				 	socket.on('tweet',function(data){
+				 		count.css("width",data.google );
+					tweetList.prepend('<li>'+data.user+': '+data.text + '</li>');
+					});
+					}
+				});
+			
+				
+		</script>	
+	</body>	
+</html>
