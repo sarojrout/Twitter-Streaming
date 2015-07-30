@@ -22,9 +22,14 @@ Go to the folder /Twitter_Streaming and then type as given below
 
 node app.js
 
+Launch App
+
+Go to Browser and hit http://127.0.0.1:3000
+
+
 PreRequisites:
 --------------------------------------------------------------
 
-You shoudl have a twitter app. 
+You should have a twitter app. 
 
 
