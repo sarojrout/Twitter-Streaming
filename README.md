@@ -31,5 +31,5 @@ PreRequisites:
 --------------------------------------------------------------
 
 You should have a twitter app. 
-
+To create a new twitter app account, visit https://apps.twitter.com/
 
