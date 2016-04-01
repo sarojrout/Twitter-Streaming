@@ -16,6 +16,8 @@ Install Node module dependencies
 
 Go to the folder /Twitter-Streaming and type npm install
 
+Open app.js and replace the consumer key, consumer secret etc by taking it from your Twitter App
+
 To Start the project,
 
 Go to the folder /Twitter_Streaming and then type as given below
